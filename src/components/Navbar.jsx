@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-
 export default function Navbar() {
   return (
-    <nav>
-      <h1 className="bg-green-900 text-red-300">helo</h1>
-      <Link to={"projects"}>click me</Link>
-      <Link to={"./"}>home</Link>
+    <nav className="justify-center items-center flex border-2 border-black gap-5 text-blue-300 fixed w-full h-[7%]">
+      <a href={"#aboutPage"}>About Page</a>
+      <a href={"#projectsPage"}>Projects Page</a>
+      <a href={"#blogPage"}>Blog Page</a>
+      <a href={"#contactsPage"}>Contacts Page</a>
     </nav>
   );
 }

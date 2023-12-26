@@ -1,19 +1,21 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import AboutPage from './pages/AboutPage'
-import ProjectsPage from './pages/ProjectsPage'
+import AboutPage from "./pages/AboutPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import Navbar from "./components/Navbar";
+import NavbarPlaceholder from "./components/NavbarPlaceholder";
+import BlogPage from "./pages/BlogPage";
+import ContactsPage from "./pages/ContactsPage";
 
 function App() {
   return (
-    <BrowserRouter>
-        <Routes>
-          <Route path={'/'} element={<HomePage />}>
-            <Route index element={<AboutPage />} />
-            <Route path={'projects'} element={<ProjectsPage />} />
-          </Route>
-        </Routes>
-    </BrowserRouter>
-  )
+    <main>
+      <Navbar />
+      <NavbarPlaceholder />
+      <AboutPage />
+      <ProjectsPage />
+      <BlogPage />
+      <ContactsPage />
+    </main>
+  );
 }
 
-export default App
+export default App;
