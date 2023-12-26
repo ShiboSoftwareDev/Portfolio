@@ -6,13 +6,13 @@ Tasks:
 
 - 4 Pages
   - About
-    - Written inside a window like in windows os
+    - written on a rotating planet maybe
   - Projects
-    - Tabs stacked like cards that you can scroll throught, and the title of all projects visible from the beginning
+    - Card stack that you can scroll through, and the title of all projects will be displayed in the beginning
   - Blog
-    - Written in terminal with progress bars
+    - DNA like structure
   - Contact
-    - Will be a card that you can flip, one side will have contacts and the other will have a messaging form. OR on windows-like taskbar
+    - Will be a card that you can flip, one side will have contacts and the other will have a messaging form
 - Scroll format
 
 ===
@@ -21,5 +21,4 @@ Technologies:
 
 - Vite
 - React
-- React Router
 - Tailwindcss
