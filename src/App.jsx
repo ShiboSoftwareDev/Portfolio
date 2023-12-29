@@ -10,7 +10,9 @@ function App() {
     <main>
       <Navbar />
       <NavbarPlaceholder />
-      <AboutPage />
+      <div className="w-[80%] aspect-[1/1] border-2 border-black">
+        <AboutPage />
+      </div>
       <ProjectsPage />
       <BlogPage />
       <ContactsPage />

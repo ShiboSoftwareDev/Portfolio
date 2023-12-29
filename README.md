@@ -6,7 +6,7 @@ Tasks:
 
 - 4 Pages
   - About
-    - written on a rotating planet maybe
+    - Moves inside a bar
   - Projects
     - Card stack that you can scroll through, and the title of all projects will be displayed in the beginning
   - Blog
