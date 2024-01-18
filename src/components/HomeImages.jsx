@@ -13,13 +13,13 @@ export default function HomeImages({ pop }) {
     "node",
   ];
   const [chosenIcon, setChosenIcon] = React.useState(
-    Math.floor(Math.random() * (imagesArray.length - 1))
+    Math.floor(Math.random() * imagesArray.length)
   );
   React.useEffect(() => {
     const loop = setInterval(() => {
       let randomNum;
       do {
-        randomNum = Math.floor(Math.random() * (imagesArray.length - 1));
+        randomNum = Math.floor(Math.random() * imagesArray.length);
       } while (randomNum === chosenIcon);
       setChosenIcon(randomNum);
     }, 3000);
@@ -34,11 +34,11 @@ export default function HomeImages({ pop }) {
     const style =
       index % 2
         ? {
-            left: `${Math.round(100 / array.length) * (index + 1)}%`,
+            left: `${Math.round(90 / array.length) * (index + 1)}%`,
             top: "25%",
           }
         : {
-            left: `${Math.round(100 / array.length) * (index + 1)}%`,
+            left: `${Math.round(90 / array.length) * (index + 1)}%`,
             top: "75%",
           };
     return (
