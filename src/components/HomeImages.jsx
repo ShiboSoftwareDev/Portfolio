@@ -1,6 +1,5 @@
 import React from "react";
 export default function HomeImages({ pop }) {
-  console.log("rendered");
   const imagesArray = [
     "git",
     "vite",
@@ -23,7 +22,6 @@ export default function HomeImages({ pop }) {
         randomNum = Math.floor(Math.random() * (imagesArray.length - 1));
       } while (randomNum === chosenIcon);
       setChosenIcon(randomNum);
-      console.log("chosen");
     }, 3000);
     return () => clearInterval(loop);
   });
@@ -31,7 +29,7 @@ export default function HomeImages({ pop }) {
     let customAction = pop
       ? "animate-customPulse"
       : index === chosenIcon
-      ? "animate-customPulse"
+      ? "animate-customAction"
       : "opacity-0";
     const style =
       index % 2

@@ -12,12 +12,13 @@ export default {
         },
         customAction: {
           "0%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "50%": { opacity: "1" },
+          "100%": { opacity: "0" },
         },
       },
       animation: {
         customPulse: "customPulse 3s ease-out",
-        customAction: "customAction 3s ease-out",
+        customAction: "customAction 3.5s ease-out",
       },
     },
   },

@@ -6,7 +6,6 @@ export default function AboutPage() {
   function toggle() {
     setTimeout(() => {
       setPop(false);
-      console.log("popped");
     }, 3000);
     setPop((prev) => !prev);
   }
