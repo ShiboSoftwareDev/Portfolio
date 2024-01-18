@@ -25,7 +25,7 @@ export default function HomeImages() {
       } while (randomNum === chosenIcon);
       setChosenIcon(randomNum);
     }, 3000);
-  }, []);
+  });
   const imagesElement = imagesArray.map((name, index, array) => {
     let customAction =
       index === chosenIcon ? "animate-customAction" : "opacity-0";
