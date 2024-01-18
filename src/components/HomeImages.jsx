@@ -23,15 +23,15 @@ export default function HomeImages({ pop }) {
         randomNum = Math.floor(Math.random() * (imagesArray.length - 1));
       } while (randomNum === chosenIcon);
       setChosenIcon(randomNum);
-      console.log("interval");
-    }, 2000);
+      console.log("chosen");
+    }, 3000);
     return () => clearInterval(loop);
   });
   const imagesElement = imagesArray.map((name, index, array) => {
     let customAction = pop
-      ? "animate-customAction"
+      ? "animate-customPulse"
       : index === chosenIcon
-      ? "animate-customAction"
+      ? "animate-customPulse"
       : "opacity-0";
     const style =
       index % 2

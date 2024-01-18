@@ -7,8 +7,8 @@ export default {
       keyframes: {
         customPulse: {
           "0%": { opacity: "0" },
-          "40%": { opacity: "0" },
-          "100%": { opacity: "1" },
+          "50%": { opacity: "1" },
+          "100%": { opacity: "0" },
         },
         customAction: {
           "0%": { opacity: "0" },
@@ -16,7 +16,7 @@ export default {
         },
       },
       animation: {
-        customPulse: "customPulse 3s ease-in-out infinite",
+        customPulse: "customPulse 3s ease-out",
         customAction: "customAction 3s ease-out",
       },
     },
