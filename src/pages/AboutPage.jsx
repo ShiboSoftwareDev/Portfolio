@@ -1,15 +1,26 @@
+import React from "react";
 import HomeImages from "../components/HomeImages";
 
 export default function AboutPage() {
+  const [pop, setPop] = React.useState(false);
+  function toggle() {
+    setTimeout(() => {
+      setPop(false);
+    }, 2000);
+    setPop((prev) => !prev);
+  }
   return (
-    <section className="relative flex items-center justify-center w-full aspect-[1/1] md:aspect-[1/0.8] xl:aspect-[1/0.6] bg-gray-800">
+    <section
+      onClick={toggle}
+      className="relative flex items-center justify-center w-full aspect-[1/1] md:aspect-[1/0.8] xl:aspect-[1/0.6] bg-gray-800"
+    >
       <h1
         id="aboutPage"
         className="text-blue-500 drop-shadow-[0_0_10px_rgba(171,32,253,1)]"
       >
         My name is Ahmed Shebani, I am a junior web developer
       </h1>
-      <HomeImages />
+      <HomeImages pop={pop} />
     </section>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
-
-export default function HomeImages() {
+export default function HomeImages({ pop }) {
+  console.log("rendered");
   const imagesArray = [
     "git",
     "vite",
@@ -13,22 +13,26 @@ export default function HomeImages() {
     "css",
     "node",
   ];
-  // if i get the same state twice the element will not re render
   const [chosenIcon, setChosenIcon] = React.useState(
     Math.floor(Math.random() * (imagesArray.length - 1))
   );
   React.useEffect(() => {
-    setInterval(() => {
+    const loop = setInterval(() => {
       let randomNum;
       do {
         randomNum = Math.floor(Math.random() * (imagesArray.length - 1));
       } while (randomNum === chosenIcon);
       setChosenIcon(randomNum);
-    }, 3000);
+      console.log("interval");
+    }, 2000);
+    return () => clearInterval(loop);
   });
   const imagesElement = imagesArray.map((name, index, array) => {
-    let customAction =
-      index === chosenIcon ? "animate-customAction" : "opacity-0";
+    let customAction = pop
+      ? "animate-customAction"
+      : index === chosenIcon
+      ? "animate-customAction"
+      : "opacity-0";
     const style =
       index % 2
         ? {
