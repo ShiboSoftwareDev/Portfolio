@@ -7,7 +7,7 @@ import Stars from "./components/Stars";
 
 function App() {
   return (
-    <main className="relative border-2 border-black">
+    <main className="relative ">
       <Navbar />
       <Stars />
       <AboutPage />
