@@ -19,6 +19,7 @@ export default {
       animation: {
         customPulse: "customPulse 3s ease-out",
         customAction: "customAction 3.5s ease-out",
+        spinSlow: "spin 10s linear infinite, customPulse 6s ease-out infinite",
       },
     },
   },

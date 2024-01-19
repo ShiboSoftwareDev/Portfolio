@@ -16,7 +16,7 @@ export default function AboutPage() {
     >
       <h1
         id="aboutPage"
-        className="text-blue-500 drop-shadow-[0_0_10px_rgba(171,32,253,1)]"
+        className="text-blue-500 drop-shadow-[0_0_10px_rgba(171,32,253,1)] z-10"
       >
         My name is Ahmed Shebani, I am a junior web developer
       </h1>
