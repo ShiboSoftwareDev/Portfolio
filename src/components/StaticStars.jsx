@@ -1,6 +1,6 @@
-import Star from "./Star";
+import StaticStar from "./StaticStar";
 
-export default function Stars({ count }) {
+export default function StaticStars({ count, indexZ }) {
   let starCount = 30; // max 30 tested
   if (typeof count === "number") {
     starCount = count;
@@ -9,20 +9,13 @@ export default function Stars({ count }) {
   for (let i = 0; i < starCount; i++) {
     starsArray.push(i);
   }
-  const starsArrayCopy = [...starsArray];
-  const arrayOrder = starsArray.map(() => {
-    return starsArrayCopy.splice(
-      Math.floor(Math.random() * starsArrayCopy.length),
-      1
-    )[0];
-  });
   const starElements = starsArray.map((element, index) => {
     return (
-      <Star
+      <StaticStar
         key={index}
         index={index}
         starCount={starCount}
-        arrayOrder={arrayOrder}
+        indexZ={indexZ}
       />
     );
   });

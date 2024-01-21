@@ -4,12 +4,14 @@ import Navbar from "./components/Navbar";
 import BlogPage from "./pages/BlogPage";
 import ContactsPage from "./pages/ContactsPage";
 import Stars from "./components/Stars";
+import StaticStars from "./components/StaticStars";
 
 function App() {
   return (
     <main className="relative ">
       <Navbar />
       <Stars />
+      <StaticStars count={120} />
       <AboutPage />
       <ProjectsPage />
       <BlogPage />
