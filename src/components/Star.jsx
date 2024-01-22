@@ -5,8 +5,7 @@ export default function Star({ index, starCount, arrayOrder }) {
   const elementOrder = arrayOrder.indexOf(index);
   React.useEffect(() => {
     setTimeout(() => {
-      let funct = () => setChosenClass("animate-spinSlow");
-      funct();
+      setChosenClass("animate-spinSlow");
     }, elementOrder * 200);
   }, [index, elementOrder]);
   const left = Math.floor(Math.random() * 90) + 1;
