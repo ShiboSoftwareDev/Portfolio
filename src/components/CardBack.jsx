@@ -48,16 +48,17 @@ export default function CardBack() {
             </label>
           </div>
           <div className="user-box relative">
-            <input
+            <textarea
               id="message"
               className="peer w-full py-2 mb-8 border-b-2 outline-none bg-transparent"
+              rows={5}
               onClick={(e) => e.stopPropagation()}
               type="text"
               autoComplete="off"
               name=""
-            ></input>
+            ></textarea>
             <label
-              className="absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-purple-700 peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-purple-700 peer-autofill:-top-[21px] peer-autofill:left-0"
+              className="absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-purple-700 peer-focus:-top-[30px] peer-focus:left-0 peer-autofill:text-purple-700 peer-autofill:-top-[21px] peer-autofill:left-0"
               htmlFor="message"
             >
               Message
