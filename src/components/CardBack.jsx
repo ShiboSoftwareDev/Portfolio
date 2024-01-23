@@ -18,7 +18,7 @@ export default function CardBack() {
           <div className="user-box relative">
             <input
               id="email"
-              className="peer w-full py-2 mb-8 border-b-2 outline-none bg-transparent autofill:duration-[5000s]"
+              className="peer w-full py-2 mb-8 border-b-2 border-purple-700 outline-none bg-transparent autofill:duration-[5000s]"
               onClick={(e) => e.stopPropagation()}
               type="email"
               autoComplete="off"
@@ -34,7 +34,7 @@ export default function CardBack() {
           <div className="user-box relative">
             <input
               id="name"
-              className="peer w-full py-2 mb-8 border-b-2 outline-none bg-transparent autofill:duration-[5000s]"
+              className="peer w-full py-2 mb-8 border-b-2 border-purple-700 outline-none bg-transparent autofill:duration-[5000s]"
               onClick={(e) => e.stopPropagation()}
               type="text"
               autoComplete="off"
@@ -50,7 +50,7 @@ export default function CardBack() {
           <div className="user-box relative">
             <textarea
               id="message"
-              className="peer w-full py-2 mb-8 border-b-2 outline-none bg-transparent"
+              className="peer w-full py-2 mb-8 border-b-2 border-purple-700 outline-none bg-transparent"
               rows={5}
               onClick={(e) => e.stopPropagation()}
               type="text"
