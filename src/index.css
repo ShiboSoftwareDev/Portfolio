@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary: 59 130 246;
+  --secondary: 126 34 206;
+  --primary-shadow: rgba(var(--primary));
+  --secondary-shadow: rgba(var(--secondary));
+}
+/* --primary: #3b82f6;
+  --secondary: #7e22ce; */
 * {
   font-family: "Inknut Antiqua", "sans-serif";
 }

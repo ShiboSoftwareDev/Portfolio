@@ -16,7 +16,7 @@ export default function ContactsPage() {
       className="bg-gray-800 [&>*]:z-10 text-center w-full h-[900px] flex flex-col items-center"
     >
       <img
-        className="drop-shadow-[0_0_10px_rgba(126,34,206,1)]"
+        className="drop-shadow-[0_0_10px_var(--secondary-shadow)]"
         src=".\src\assets\images\3dRotate.png"
         alt="3dRotate"
       ></img>
@@ -36,7 +36,7 @@ export default function ContactsPage() {
         </div>
       </div>
       <img
-        className="drop-shadow-[0_0_10px_rgba(126,34,206,1)]"
+        className="drop-shadow-[0_0_10px_var(--secondary-shadow)]"
         src=".\src\assets\images\3dRotate.png"
         alt="3dRotate"
       ></img>

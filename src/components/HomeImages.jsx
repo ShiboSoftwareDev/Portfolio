@@ -46,7 +46,7 @@ export default function HomeImages({ pop }) {
         key={index}
         src={`./src/assets/images/icons/${name}.svg`}
         alt={`${name} icon`}
-        className={`absolute drop-shadow-[0_0_10px_rgba(126,34,206,1)] ${customAction}`}
+        className={`absolute drop-shadow-[0_0_10px_var(--secondary-shadow)] ${customAction}`}
         style={style}
       />
     );

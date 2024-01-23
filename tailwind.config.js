@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      colors: {
+        primary: "rgba(var(--primary) / <alpha-value>)",
+        secondary: "rgba(var(--secondary) / <alpha-value>)",
+      },
       keyframes: {
         customPulse: {
           "0%": { opacity: "0" },
@@ -77,7 +81,7 @@ export default {
         slider4: "slide4 1s 0.75s linear infinite",
       },
       backgroundImage: {
-        blueGradient: "linear-gradient(360deg, transparent, #3b82f6)",
+        blueGradient: "linear-gradient(360deg, transparent, var(--primary))",
       },
     },
   },

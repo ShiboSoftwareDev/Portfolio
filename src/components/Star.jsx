@@ -16,7 +16,7 @@ export default function Star({ index, starCount, arrayOrder }) {
       src="./src/assets/images/Star.svg"
       key={index}
       style={style}
-      className={`absolute z-[1] opacity-0 ${chosenClass} w-10 h-10 drop-shadow-[0_0_10px_rgba(126,34,206,1)]`}
+      className={`absolute z-[1] opacity-0 ${chosenClass} w-10 h-10 drop-shadow-[0_0_10px_var(--secondary-shadow)]`}
     ></img>
   );
 }
