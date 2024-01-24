@@ -50,6 +50,11 @@ export default function CardFront() {
             alt="linkedin"
           ></img>
         </a>
+        <img
+          className="drop-shadow-[0_0_10px_var(--secondary-shadow)] absolute bottom-0 left-[42.5%] w-[15%]"
+          src=".\src\assets\images\3dRotate.png"
+          alt="3dRotate"
+        ></img>
       </div>
     </div>
   );

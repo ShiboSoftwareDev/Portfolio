@@ -6,6 +6,8 @@
 :root {
   --primary: 59 130 246;
   --secondary: 126 34 206;
+  /* --primary: 3 233 244;
+  --secondary: 20 125 16; */
   --primary-shadow: rgba(var(--primary));
   --secondary-shadow: rgba(var(--secondary));
 }

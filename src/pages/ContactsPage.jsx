@@ -15,11 +15,6 @@ export default function ContactsPage() {
       id="contactsPage"
       className="bg-gray-800 [&>*]:z-10 text-center w-full h-[900px] flex flex-col items-center"
     >
-      <img
-        className="drop-shadow-[0_0_10px_var(--secondary-shadow)]"
-        src=".\src\assets\images\3dRotate.png"
-        alt="3dRotate"
-      ></img>
       <div
         id="flip-card-container"
         onClick={flip}
@@ -35,11 +30,6 @@ export default function ContactsPage() {
           <CardBack />
         </div>
       </div>
-      <img
-        className="drop-shadow-[0_0_10px_var(--secondary-shadow)]"
-        src=".\src\assets\images\3dRotate.png"
-        alt="3dRotate"
-      ></img>
     </section>
   );
 }

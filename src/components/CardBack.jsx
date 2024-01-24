@@ -80,6 +80,11 @@ export default function CardBack() {
           </a>
         </form>
       </div>
+      <img
+        className="drop-shadow-[0_0_10px_var(--secondary-shadow)] absolute bottom-0 left-[42.5%] w-[15%] [transform:scaleX(-1)]"
+        src=".\src\assets\images\3dRotate.png"
+        alt="3dRotate"
+      ></img>
     </div>
   );
 }
