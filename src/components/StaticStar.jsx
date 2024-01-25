@@ -1,4 +1,10 @@
-export default function StaticStar({ index, starCount, indexZ }) {
+import React from "react";
+
+const StaticStar = React.memo(function StaticStar({
+  index,
+  starCount,
+  indexZ,
+}) {
   const rotation = Math.floor(Math.random() * 4);
   let position = "";
   const depth = indexZ ? "z-[-1]" : "z-[1]";
@@ -28,4 +34,6 @@ export default function StaticStar({ index, starCount, indexZ }) {
       className={`absolute ${depth} w-1 h-1 ${position}`}
     ></img>
   );
-}
+});
+
+export default StaticStar;

@@ -6,7 +6,7 @@ Tasks:
 
 - 4 Pages
   - About
-    - Moves inside a bar
+    - Icons that pop up maybe rotate like planets
   - Projects
     - Card stack that you can scroll through, and the title of all projects will be displayed in the beginning
   - Blog
@@ -22,3 +22,4 @@ Technologies:
 - Vite
 - React
 - Tailwindcss
+- EmailJS

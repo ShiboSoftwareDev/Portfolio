@@ -6,6 +6,11 @@ import StaticStars from "../components/StaticStars";
 
 export default function CardBack() {
   const [starState, setStarState] = React.useState(false);
+  const [nameState, setNameState] = React.useState("");
+  const [emailState, setEmailState] = React.useState("");
+  const [messageState, setMessageState] = React.useState("");
+  const [success, setSuccess] = React.useState(false);
+  const [failure, setFailure] = React.useState(false);
 
   const form = useRef();
 
@@ -20,11 +25,22 @@ export default function CardBack() {
         "Jk6oS_ur4kolYSl5n"
       )
       .then(
-        (result) => {
-          console.log(result.text);
+        () => {
+          setEmailState("");
+          setNameState("");
+          setMessageState("");
+          setSuccess(true);
+          setTimeout(() => {
+            setSuccess(false);
+          }, 2000);
         },
-        (error) => {
-          console.log(error.text);
+        () => {
+          setEmailState("");
+          setNameState("");
+          setFailure(true);
+          setTimeout(() => {
+            setFailure(false);
+          }, 4000);
         }
       );
   };
@@ -42,15 +58,18 @@ export default function CardBack() {
           <div className="user-box relative">
             <input
               id="email"
+              value={emailState}
               className="peer w-full py-2 mb-8 border-b-2 border-secondary outline-none bg-transparent autofill:duration-[5000s]"
+              onChange={(e) => setEmailState(e.target.value)}
               onClick={(e) => e.stopPropagation()}
               type="email"
-              autoComplete="off"
               name="user_email"
             ></input>
             <label
               htmlFor="email"
-              className="absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0"
+              className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0 ${
+                emailState !== "" ? "left-0 -top-[21px] text-secondary" : ""
+              }`}
             >
               Email
             </label>
@@ -58,14 +77,17 @@ export default function CardBack() {
           <div className="user-box relative">
             <input
               id="name"
+              value={nameState}
               className="peer w-full py-2 mb-8 border-b-2 border-secondary outline-none bg-transparent autofill:duration-[5000s]"
+              onChange={(e) => setNameState(e.target.value)}
               onClick={(e) => e.stopPropagation()}
               type="text"
-              autoComplete="off"
               name="user_name"
             ></input>
             <label
-              className="absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0"
+              className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0 ${
+                nameState !== "" ? "left-0 -top-[21px] text-secondary" : ""
+              }`}
               htmlFor="name"
             >
               Name
@@ -74,18 +96,29 @@ export default function CardBack() {
           <div className="user-box relative">
             <textarea
               id="message"
+              value={messageState}
               className="peer w-full py-2 mb-8 border-b-2 border-secondary outline-none bg-transparent"
               rows={5}
+              onChange={(e) => setMessageState(e.target.value)}
               onClick={(e) => e.stopPropagation()}
-              autoComplete="off"
               name="message"
             ></textarea>
             <label
-              className="absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[30px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0"
+              className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[30px] peer-focus:left-0 ${
+                messageState !== "" ? "left-0 -top-[30px] text-secondary" : ""
+              }`}
               htmlFor="message"
             >
               Message
             </label>
+            {success ? (
+              <h2 className="text-green-500 absolute w-full">Message Sent!</h2>
+            ) : null}
+            {failure ? (
+              <h2 className="text-red-700 absolute w-full">
+                An error occurred!
+              </h2>
+            ) : null}
           </div>
           <button
             type="submit"
