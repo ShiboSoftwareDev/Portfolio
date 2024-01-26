@@ -1,4 +1,7 @@
+import Project from "../components/Project";
+
 export default function ProjectsPage() {
+  let array = [1, 2, 3, 4];
   return (
     <section
       id="projectsPage"
@@ -6,106 +9,9 @@ export default function ProjectsPage() {
     >
       <div className="container w-[60%] my-0 mx-auto">
         <ul id="cards" className="list-none pl-0 grid grid-cols-1 [&>*]:z-10">
-          <li className="card sticky top-0" id="card1">
-            <div className="card-body box-border p-8 rounded-[50px] flex flex-col justify-center items-center transition-all duration-500 shadow-[0_0_10px_var(--secondary-shadow)] [backdrop-filter:blur(10px)] bg-secondary bg-opacity-5">
-              <h2 className="drop-shadow-[0_0_10px_var(--secondary-shadow)]">
-                Project 1
-              </h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </li>
-          <li className="card sticky top-0" id="card2">
-            <div className="card-body box-border p-8 rounded-[50px] flex flex-col justify-center items-center transition-all duration-500 shadow-[0_0_10px_var(--secondary-shadow)] [backdrop-filter:blur(10px)] bg-secondary bg-opacity-5">
-              <h2 className="drop-shadow-[0_0_10px_var(--secondary-shadow)]">
-                Project 2
-              </h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </li>
-          <li className="card sticky top-0" id="card3">
-            <div className="card-body box-border p-8 rounded-[50px] flex flex-col justify-center items-center transition-all duration-500 shadow-[0_0_10px_var(--secondary-shadow)] [backdrop-filter:blur(10px)] bg-secondary bg-opacity-5">
-              <h2 className="drop-shadow-[0_0_10px_var(--secondary-shadow)]">
-                Project 3
-              </h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </li>
-          <li className="card sticky top-0" id="card4">
-            <div className="card-body box-border p-8 rounded-[50px] flex flex-col justify-center items-center transition-all duration-500 shadow-[0_0_10px_var(--secondary-shadow)] [backdrop-filter:blur(10px)] bg-secondary bg-opacity-5">
-              <h2 className="drop-shadow-[0_0_10px_var(--secondary-shadow)]">
-                Project 4
-              </h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the standard dummy text ever
-                since the 1500s, when an unknown printer took a galley of type
-                and scrambled it to make a type specimen book.
-              </p>
-            </div>
-          </li>
+          {array.map((element) => (
+            <Project key={element} index={element} />
+          ))}
         </ul>
       </div>
       <div className="w-full h-20"></div>

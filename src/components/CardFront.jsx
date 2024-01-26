@@ -15,7 +15,7 @@ export default function CardFront() {
       <h1 className="absolute w-[100%]">You can fine me on:</h1>
       <div className="w-[100%] h-[100%] grid content-center">
         <a
-          className="w-[15%] mb-14 aspect-[1/1] bg-secondary bg-opacity-5 drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
+          className="w-[15%] mb-14 aspect-[1/1] bg-white drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
           onClick={(event) => event.stopPropagation()}
           href="https://github.com/ShiboSoftwareDev"
           target="blank"
@@ -27,7 +27,7 @@ export default function CardFront() {
           ></img>
         </a>
         <a
-          className="w-[15%] mb-14 aspect-[1/1] bg-secondary bg-opacity-5 drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
+          className="w-[15%] mb-14 aspect-[1/1] bg-white drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
           onClick={(event) => event.stopPropagation()}
           href="https://x.com/elonmusk?s=20"
           target="blank"
@@ -39,7 +39,7 @@ export default function CardFront() {
           ></img>
         </a>
         <a
-          className="w-[15%] mb-14 aspect-[1/1] bg-secondary bg-opacity-5 drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
+          className="w-[15%] mb-14 aspect-[1/1] bg-white drop-shadow-[0_0_10px_var(--secondary-shadow)] rounded-3xl justify-self-center"
           onClick={(event) => event.stopPropagation()}
           href="https://www.linkedin.com/in/ahmed-shebani-3563142a6/"
           target="blank"
