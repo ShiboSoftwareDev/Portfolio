@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import StaticStars from "../components/StaticStars";
 
-// need to change anchor tag box shadow color
-
 export default function CardBack() {
   const [starState, setStarState] = React.useState(false);
   const [nameState, setNameState] = React.useState("");
@@ -52,7 +50,7 @@ export default function CardBack() {
       className="text-primary border-primary border-2 [backface-visibility:hidden] [backdrop-filter:blur(5px)] w-[100%] h-[100%] bg-secondary bg-opacity-5 absolute overflow-hidden rounded-lg [transform:rotateY(180deg)]"
     >
       {starState ? <StaticStars count={30} indexZ={-1} /> : null}
-      <div className="login-box absolute -translate-x-[50%] -translate-y-[50%] left-[50%] top-[50%] w-[70%]">
+      <div className="absolute -translate-x-[50%] -translate-y-[50%] left-[50%] top-[50%] w-[70%]">
         <h2 className="mb-8">Message me</h2>
         <form ref={form} onSubmit={sendEmail} method="POST">
           <div className="user-box relative">

@@ -10,9 +10,41 @@
   --secondary: 20 125 16; */
   --primary-shadow: rgba(var(--primary));
   --secondary-shadow: rgba(var(--secondary));
+
+  --cards: 4;
+  --cardHeight: 75vh;
+  --cardTopPadding: 2em;
+  --cardMargin: 4vw;
 }
 /* --primary: #3b82f6;
   --secondary: #7e22ce; */
 * {
   font-family: "Inknut Antiqua", "sans-serif";
+}
+#cards {
+  grid-template-rows: repeat(var(--cards), var(--cardHeight));
+  gap: var(--cardMargin);
+  padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+  margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+  --index: 1;
+}
+#card2 {
+  --index: 2;
+}
+#card3 {
+  --index: 3;
+}
+#card4 {
+  --index: 4;
+}
+
+.card {
+  padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+.card-body {
+  height: var(--cardHeight);
 }
