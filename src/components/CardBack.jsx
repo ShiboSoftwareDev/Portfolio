@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import StaticStars from "../components/StaticStars";
 
+//need to fix submit button animation
+
 export default function CardBack() {
   const [starState, setStarState] = React.useState(false);
   const [nameState, setNameState] = React.useState("");
@@ -42,7 +44,6 @@ export default function CardBack() {
         }
       );
   };
-
   return (
     <div
       onMouseEnter={() => setStarState(true)}
@@ -55,6 +56,7 @@ export default function CardBack() {
         <form ref={form} onSubmit={sendEmail} method="POST">
           <div className="user-box relative">
             <input
+              required
               id="email"
               value={emailState}
               className="peer w-full py-2 mb-8 border-b-2 border-secondary outline-none bg-transparent autofill:duration-[5000s]"
@@ -66,7 +68,7 @@ export default function CardBack() {
             <label
               htmlFor="email"
               className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0 ${
-                emailState !== "" ? "left-0 -top-[21px] text-secondary" : ""
+                emailState !== "" ? "left-0 top-[-21px] text-secondary" : ""
               }`}
             >
               Email
@@ -84,7 +86,7 @@ export default function CardBack() {
             ></input>
             <label
               className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[21px] peer-focus:left-0 peer-autofill:text-secondary peer-autofill:-top-[21px] peer-autofill:left-0 ${
-                nameState !== "" ? "left-0 -top-[21px] text-secondary" : ""
+                nameState !== "" ? "left-0 top-[-21px] text-secondary" : ""
               }`}
               htmlFor="name"
             >
@@ -94,6 +96,7 @@ export default function CardBack() {
           <div className="user-box relative">
             <textarea
               id="message"
+              required
               value={messageState}
               className="peer w-full py-2 mb-8 border-b-2 border-secondary outline-none bg-transparent"
               rows={5}
@@ -103,7 +106,7 @@ export default function CardBack() {
             ></textarea>
             <label
               className={`absolute top-0 left-0 py-[10px] duration-500 pointer-events-none peer-focus:text-secondary peer-focus:-top-[30px] peer-focus:left-0 ${
-                messageState !== "" ? "left-0 -top-[30px] text-secondary" : ""
+                messageState !== "" ? "left-0 top-[-30px] text-secondary" : ""
               }`}
               htmlFor="message"
             >
@@ -121,20 +124,18 @@ export default function CardBack() {
           <button
             type="submit"
             value="Send"
-            className="relative cursor-pointer inline-block py-3 px-5 overflow-hidden duration-500 mt-10 tracking-[4px] drop-shadow-[0_0_50px_var(--primary-shadow)] hover:text-white hover:bg-primary hover:rounded-[5px] hover:shadow-[0_0_25px_var(--primary-shadow),0_0_5px_var(--primary-shadow)]"
+            className="relative overflow-hidden cursor-pointer inline-block py-3 px-5 duration-500 mt-10 tracking-[4px] drop-shadow-[0_0_50px_var(--primary-shadow)] hover:text-white hover:bg-primary hover:rounded-[5px] hover:shadow-[0_0_25px_var(--primary-shadow),0_0_5px_var(--primary-shadow)]"
             onClick={(e) => {
               e.stopPropagation();
-              e.preventDefault();
             }}
             href="#"
           >
+            SEND
             <span className="absolute block animate-slider1 top-0 left-[-100%] w-full h-[2px] bg-blueGradient"></span>
             <span className="absolute block animate-slider2 right-0 top-[-100%] w-[2px] h-full bg-blueGradient"></span>
             <span className="absolute block animate-slider3 bottom-0 right-[-100%] w-full h-[2px] bg-blueGradient"></span>
             <span className="absolute block animate-slider4 left-0 bottom-[-100%] h-full w-[2px] bg-blueGradient"></span>
-            SEND
           </button>
-          <input type="submit" value="Send"></input>
         </form>
       </div>
       <img

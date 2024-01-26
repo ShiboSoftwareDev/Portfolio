@@ -81,7 +81,8 @@ export default {
         slider4: "slide4 1s 0.75s linear infinite",
       },
       backgroundImage: {
-        blueGradient: "linear-gradient(360deg, transparent, var(--primary))",
+        blueGradient:
+          "linear-gradient(360deg, transparent, var(--primary-shadow))",
       },
     },
   },
