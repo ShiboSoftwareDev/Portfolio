@@ -1,8 +1,12 @@
 export default function Project({ index }) {
+  // max 10 projects, add more in tailwind config safelist
   const id = "card" + index;
   console.log(id);
   return (
-    <li className="card sticky top-0" id={id}>
+    <li
+      className={`card [padding-top:calc(var(--index)*var(--cardTopPadding))] [--index:${index}] sticky top-0`}
+      id={id}
+    >
       <div className="card-body box-border pt-0 px-8 pb-8 rounded-[50px] flex flex-col justify-between items-center transition-all duration-500 shadow-[0_0_10px_var(--secondary-shadow)] [backdrop-filter:blur(10px)] bg-white bg-opacity-80">
         <h2 className="drop-shadow-[0_0_10px_var(--secondary-shadow)]">
           Project {index}

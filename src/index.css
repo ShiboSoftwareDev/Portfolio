@@ -28,23 +28,6 @@
   margin-bottom: var(--cardMargin);
 }
 
-#card1 {
-  --index: 1;
-}
-#card2 {
-  --index: 2;
-}
-#card3 {
-  --index: 3;
-}
-#card4 {
-  --index: 4;
-}
-
-.card {
-  padding-top: calc(var(--index) * var(--cardTopPadding));
-}
-
 .card-body {
   height: var(--cardHeight);
 }

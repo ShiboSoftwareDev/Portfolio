@@ -2,8 +2,6 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import StaticStars from "../components/StaticStars";
 
-//need to fix submit button animation
-
 export default function CardBack() {
   const [starState, setStarState] = React.useState(false);
   const [nameState, setNameState] = React.useState("");
