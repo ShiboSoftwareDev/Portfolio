@@ -4,20 +4,21 @@
 @tailwind utilities;
 
 :root {
-  --primary: 59 130 246;
-  --secondary: 126 34 206;
+  --primary: 255 255 255;
+  --secondary: 59 130 246;
   /* --primary: 3 233 244;
   --secondary: 20 125 16; */
   --primary-shadow: rgba(var(--primary));
   --secondary-shadow: rgba(var(--secondary));
 
-  --cards: 4;
+  --cards: 6;
   --cardHeight: 75vh;
-  --cardTopPadding: 2.5em;
+  --cardTopPadding: 3.5em;
   --cardMargin: 4vw;
 }
 /* --primary: #3b82f6;
-  --secondary: #7e22ce; */
+  --secondary: #7e22ce; 
+  --secondary: 126 34 206;*/
 * {
   font-family: "Inknut Antiqua", "sans-serif";
 }

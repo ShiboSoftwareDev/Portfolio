@@ -122,7 +122,7 @@ export default function CardBack() {
           <button
             type="submit"
             value="Send"
-            className="relative overflow-hidden cursor-pointer inline-block py-3 px-5 duration-500 mt-10 tracking-[4px] drop-shadow-[0_0_50px_var(--primary-shadow)] hover:text-white hover:bg-primary hover:rounded-[5px] hover:shadow-[0_0_25px_var(--primary-shadow),0_0_5px_var(--primary-shadow)]"
+            className="relative overflow-hidden cursor-pointer inline-block py-3 px-5 duration-500 mt-10 tracking-[4px] drop-shadow-[0_0_50px_var(--primary-shadow)] hover:text-secondary hover:bg-primary hover:rounded-[5px] hover:shadow-[0_0_25px_var(--primary-shadow),0_0_5px_var(--primary-shadow)]"
             onClick={(e) => {
               e.stopPropagation();
             }}

@@ -1,7 +1,18 @@
 import Project from "../components/Project";
+import projectsData from "../assets/imports";
 
 export default function ProjectsPage() {
-  let array = [1, 2, 3, 4];
+  let projectsArray = projectsData.map((element, index) => {
+    return (
+      <Project
+        key={index}
+        index={index}
+        title={element.title}
+        mainText={element.mainText}
+        hoverText={element.hoverText}
+      />
+    );
+  });
   return (
     <section
       id="projectsPage"
@@ -9,9 +20,7 @@ export default function ProjectsPage() {
     >
       <div className="container w-[60%] my-0 mx-auto">
         <ul id="cards" className="list-none pl-0 grid grid-cols-1 [&>*]:z-10">
-          {array.map((element) => (
-            <Project key={element} index={element} />
-          ))}
+          {projectsArray}
         </ul>
       </div>
       <div className="w-full h-20"></div>
