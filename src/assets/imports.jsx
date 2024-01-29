@@ -6,6 +6,7 @@ const projectsData = [
     title: "Portfolio",
     mainText: "My first project ever!",
     hoverText: "More information.",
+    link: "http://localhost:5173/",
   },
   {
     title: "Project 2",

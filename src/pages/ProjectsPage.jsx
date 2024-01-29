@@ -10,6 +10,7 @@ export default function ProjectsPage() {
         title={element.title}
         mainText={element.mainText}
         hoverText={element.hoverText}
+        link={element.link}
       />
     );
   });
