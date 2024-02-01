@@ -19,6 +19,8 @@ export default {
       colors: {
         primary: "rgba(var(--primary) / <alpha-value>)",
         secondary: "rgba(var(--secondary) / <alpha-value>)",
+        greenNebula: "rgba(var(--green-nebula) / <alpha-value>)",
+        purpleNebula: "rgba(var(--purple-nebula) / <alpha-value>)",
       },
       keyframes: {
         customPulse: {
