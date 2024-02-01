@@ -1,14 +1,26 @@
-export default function Planet({ positionArray, order }) {
+export default function Planet({ positionArray, order, blog }) {
+  console.log(blog);
   // location 1: left planet
   // location 2: center planet
   // location 3: right planet
   let location = positionArray[order];
   let size = Math.floor(Math.random() * 5);
   const colorArray = [
-    "bg-purpleNebula drop-shadow-[0_0_10px_var(--purple-shadow)]",
-    "bg-greenNebula drop-shadow-[0_0_10px_var(--green-shadow)]",
-    "bg-secondary drop-shadow-[0_0_10px_var(--secondary-shadow)]",
+    {
+      accent: " bg-purpleNebula",
+      shadow: " drop-shadow-[0_0_10px_var(--purple-shadow)]",
+    },
+    {
+      accent: " bg-greenNebula",
+      shadow: " drop-shadow-[0_0_10px_var(--green-shadow)]",
+    },
+    {
+      accent: "bg-secondary",
+      shadow: " drop-shadow-[0_0_10px_var(--secondary-shadow)]",
+    },
   ];
+
+  let color = Math.floor(Math.random() * 3);
 
   const widthArray = [
     "w-[calc(15%+100%)]",
@@ -30,10 +42,20 @@ export default function Planet({ positionArray, order }) {
   return (
     <div className="w-[60%] h-auto flex items-center justify-center">
       <div
-        className={`flex relative ${position} ${
-          colorArray[Math.floor(Math.random() * 3)]
-        } items-center justify-center w-[25%] aspect-square border-2 border-white rounded-full`}
+        className={`flex group z-20 relative ${position} ${
+          colorArray[color].accent + colorArray[color].shadow
+        } items-center text-center justify-center w-[25%] aspect-square border-2 border-white rounded-full`}
       >
+        <h1
+          className={`absolute text-primary group-hover:opacity-0 ${colorArray[color].shadow}`}
+        >
+          {blog.title}
+        </h1>
+        <p
+          className={`absolute opacity-0 group-hover:opacity-100 text-primary ${colorArray[color].shadow}`}
+        >
+          {blog.details}
+        </p>
         <div
           className={`absolute flex items-center justify-center bg-none ${
             widthArray[Math.floor(Math.random() * 5)]

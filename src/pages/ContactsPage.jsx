@@ -17,7 +17,7 @@ export default function ContactsPage() {
     >
       <div
         onClick={flip}
-        className="bg-transparent mt-10 w-[500px] h-[700px] [perspective:2000px]"
+        className="bg-transparent mt-16 w-[500px] h-[700px] [perspective:2000px]"
       >
         <div
           className={`relative w-[100%] h-[100%] text-center [transition:transform_0.8s] [transform-style:preserve-3d] ${

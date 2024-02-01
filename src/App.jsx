@@ -1,7 +1,7 @@
-import AboutPage from "./pages/AboutPage";
+import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import Navbar from "./components/Navbar";
-import BlogPage from "./pages/BlogPage";
+import AboutPage from "./pages/AboutPage";
 import ContactsPage from "./pages/ContactsPage";
 import Stars from "./components/Stars";
 import StaticStars from "./components/StaticStars";
@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <Stars />
       <StaticStars count={120} />
-      <AboutPage />
+      <HomePage />
       <ProjectsPage />
-      <BlogPage />
+      <AboutPage />
       <ContactsPage />
     </main>
   );
